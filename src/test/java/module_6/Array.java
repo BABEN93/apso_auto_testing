@@ -10,10 +10,19 @@ public class Array {
 
         System.out.println(array[1].toLowerCase());
 
-        String formattedString = array[1].charAt(0) + " " + array[1].charAt(1) + " " + array[1].substring(2);
-
-        System.out.println(formattedString);
+        for (String str : array) {
+            if (str.charAt(1) == 'О') {
+                StringBuilder formattedString = new StringBuilder();
+                formattedString
+                        .append(str.charAt(0))
+                        .append(" ")
+                        .append(str.charAt(1))
+                        .append(" ")
+                        .append(str.charAt(2))
+                        .append(str.charAt(3));
+                System.out.println(formattedString);
+            }
+        }
 
     }
-
 }
