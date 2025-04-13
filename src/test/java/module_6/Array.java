@@ -1,8 +1,15 @@
 package module_6;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Random;
+
 public class Array {
 
-    public static void main(String[] args) {
+    @Test
+    public void arrayString() {
+
+        int index = generateRandomNumber();
 
         String[] array = {"привет", "ПОКА", "гипербола"};
 
@@ -24,5 +31,12 @@ public class Array {
             }
         }
 
+        System.out.println("Рандом значение: " + array[index]);
     }
+
+    private int generateRandomNumber() {
+        Random rand = new Random();
+        return rand.nextInt(3) + 1;
+    }
+
 }
