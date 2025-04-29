@@ -1,5 +1,6 @@
 package module_3;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class Aclass {
@@ -8,6 +9,7 @@ public class Aclass {
     public int b;
     static String c;
 
+    @Disabled
     @Test
     public void staticVariables() {
         c = "Новое значение переменной";

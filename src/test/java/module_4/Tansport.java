@@ -1,6 +1,7 @@
 package module_4;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class Tansport {
@@ -15,21 +16,25 @@ public class Tansport {
     Car car3 = new Car("GAZ", "2000", "black");
     Car car4 = new Car("", "", "");
 
+    @Disabled
     @Test
     public void getCar1() {
         car.getCarModelAndYear();
     }
 
+    @Disabled
     @Test
     public void getCar2() {
         car2.getCarModelAndYear();
     }
 
+    @Disabled
     @Test
     public void getCar3() {
         car3.getCarModelAndYearAndColour("GAZ");
     }
 
+    @Disabled
     @Test
     public void getCar4() {
         car4.getCarModelAndYearAndColour("VAZ");

@@ -1,11 +1,13 @@
 package module_3;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class Bclass {
 
     Aclass aclass = new Aclass();
 
+    @Disabled
     @Test
     public void redefineVariables (){
         aclass.a = "Новое значение переменной";

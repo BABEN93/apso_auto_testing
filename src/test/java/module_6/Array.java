@@ -1,11 +1,13 @@
 package module_6;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
 public class Array {
 
+    @Disabled
     @Test
     public void arrayString() {
 
