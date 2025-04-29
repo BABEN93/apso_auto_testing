@@ -1,0 +1,7 @@
+.idea
+target
+.allure
+build
+target/allure-results
+index.html
+apso_auto_testing.iml
