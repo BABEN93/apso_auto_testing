@@ -5,17 +5,22 @@ import org.junit.jupiter.api.Test;
 
 public class TestPage {
 
-    Page page = new Page();
+    WikipediaMainPage wikipediaMainPage = new WikipediaMainPage();
+    WikipediaArticleWizardPage wikipediaArticleWizardPage = new WikipediaArticleWizardPage();
 
     @Test
     @Step("Тест Логотипа Википедии")
     public void testWikiSearch() {
-        try {
-            page.openWikipedia();
-            page.search("тест");
-            page.verifyWikiIconDisplayed();
-        } finally {
-            page.tearDown();
-        }
+        wikipediaMainPage.openWikipedia();
+        wikipediaMainPage.search("тест");
+        wikipediaMainPage.verifyWikiIconDisplayed();
+    }
+
+    @Test
+    @Step("Перейти в создать статью")
+    public void testGoCreateArticle() {
+        wikipediaMainPage.openWikipedia();
+        wikipediaMainPage.createArticle();
+        wikipediaArticleWizardPage.nextStepButton();
     }
 }
