@@ -8,13 +8,13 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class WikipediaArticleWizardPage {
 
-    private final Button buttonCreateArticle = new Button
+    private final Button1 button1CreateArticle = new Button1
             ("Создать статью", $x("//*[text()='Следующий шаг']"));
     private SelenideElement search = $x("//input[@name='search']");
 
     @Step
     public WikipediaArticleWizardPage nextStepButton() {
-        buttonCreateArticle.buttonClick();
+        button1CreateArticle.buttonClick();
         search.shouldBe(Condition.visible);
         return this;
     }
