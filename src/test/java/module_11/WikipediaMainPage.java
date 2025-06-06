@@ -12,7 +12,7 @@ public class WikipediaMainPage {
     private String baseUrl = "https://ru.wikipedia.org";
     private SelenideElement searchInput = $x("//*[@id='searchInput']");
     private SelenideElement wikiLogo = $x("/html/body/div[4]/div[2]/div/a");
-    private final Button buttonCreateArticle = new Button
+    private final Button1 button1CreateArticle = new Button1
             ("Создать статью", $x("//*[text()='Создать статью']"));
 
     @Step("Открыть wikipedia")
@@ -23,7 +23,7 @@ public class WikipediaMainPage {
 
     @Step("Перейти в 'Создать статью'")
     public WikipediaMainPage createArticle() {
-        buttonCreateArticle.buttonClick();
+        button1CreateArticle.buttonClick();
         return this;
     }
 

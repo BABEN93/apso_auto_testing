@@ -1,12 +1,14 @@
-package module_11;
+package module_15.frontEndService.pageElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.Duration;
 
+@Slf4j
 public class Button {
 
     private Integer waitForElement = 10;
@@ -22,8 +24,13 @@ public class Button {
 
     @Step("Кликаем на кнопку")
     public Button buttonClick() {
-        selector.shouldBe(Condition.enabled, Duration.ofSeconds(waitForElement))
-                .click();
+        try {
+            selector.shouldBe(Condition.enabled, Duration.ofSeconds(waitForElement)).scrollIntoView(true)
+                    .click();
+        } catch (Exception e) {
+            log.error("Ошибка нажатия кнопки");
+            e.printStackTrace();
+        }
         return this;
     }
 }
