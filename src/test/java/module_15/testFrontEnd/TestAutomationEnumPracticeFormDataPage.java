@@ -26,6 +26,7 @@ public class TestAutomationEnumPracticeFormDataPage {
     @DisplayName("Заполнить полностью всю форму регистрации")
     public void testCase_1() {
         //Заполнение формы
+
         automationPracticeFormPage.inputFirstName(EnumPracticeFormData.VALID_DATA.getFirstName());
         automationPracticeFormPage.inputLastName(EnumPracticeFormData.VALID_DATA.getLastName());
         automationPracticeFormPage.inputEmail(EnumPracticeFormData.VALID_DATA.getEmail());
